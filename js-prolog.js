@@ -532,8 +532,34 @@ function print_frame(e) {
 
     })();
 };
+
+// (define db
+//   '(((some foo))
+//     ((some bar))
+//     ((some baz))
+
+//     ((eq ("?" X) ("?" X)))
+
+//     ((neq ("?" X) ("?" Y))
+//      (eq ("?" X) ("?" Y)) ! fail)
+
+//     ((neq ("?" X) ("?" Y)))))
+
+// (define goals '((some ("?" X))
+//                 (some ("?" Y))
+//                 (neq ("?" X) ("?" Y))))
+
 let db = list(list(list("some","foo")),list(list("some","bar")),list(list("some","baz")),list(list("eq",list("?","X"),list("?","X"))),list(list("neq",list("?","X"),list("?","Y")),list("eq",list("?","X"),list("?","Y")),"!","fail"),list(list("neq",list("?","X"),list("?","Y"))));
 let goals = list(list("some",list("?","X")),list("some",list("?","Y")),list("neq",list("?","X"),list("?","Y")));
 clear_result();
 prove6(list(),goals,db,empty,1,list(),db);
 console.log(get_result ().toString ());
+
+
+// clear.
+// some(foo).
+// some(bar).
+// some(baz).
+// eq(X,X) = true.
+// neq(X,Y) = eq(Z) & eq(Y) & cut & false.
+// match(some(Z) & some(Y) & neq(X,Y)).
