@@ -4,7 +4,7 @@ js-prolog
 
 See run.bash for 2 simple examples.
 
-# Original Code Was Transpiled From Nils Holm's Prolog in 6 Slides
+### Original Code Was Transpiled From Nils Holm's Prolog in 6 Slides
 
 see https://computingsimplicity.neocities.org/blogs/OhmInSmallSteps.pdf
 
