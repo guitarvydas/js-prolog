@@ -30,4 +30,4 @@ let g =
     );
 
 var result = query (g);
-console.log(result.toString ());
+console.log (result.toString ());
