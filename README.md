@@ -10,4 +10,3 @@ see https://computingsimplicity.neocities.org/blogs/OhmInSmallSteps.pdf
 
 especially the section "Ohm and Scheme"
 
-(skip ahead, if you already know Ohm-js)
